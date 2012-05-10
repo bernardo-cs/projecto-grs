@@ -1,0 +1,15 @@
+; reverse lookup database 
+$TTL    1
+@               IN      SOA     2.192.12.190.in-addr.arpa.    nobody.nowhere. (
+                        2012041201 ; serial
+                        28 ; refresh
+                        14 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl 
+                        )
+                        
+@                             IN      NS      2.192.12.190.in-addr.arpa.
+2.192.12.190.in-addr.arpa.    IN      A       190.12.192.2
+2            PTR        .
+1          	 PTR        ispdnspt.pt.
+3			 PTR		isppcconfig.pt.

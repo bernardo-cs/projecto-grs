@@ -1,0 +1,17 @@
+$TTL    60000
+@               IN      SOA     dnsempresa1.empresa.pt.    root.dnsempresa1.empresa.pt. (
+                        2012031201 ; serial
+                        28 ; refresh
+                        14 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+@              IN  		MX  5   webmail.empresa.pt                      
+@              IN	  	NS      dnsempresa1.empresa.pt.
+dnsempresa1    IN		A  		190.12.131.1
+
+www        	   IN		A  		190.12.131.3
+imap		   IN		A		190.12.131.3
+pop		   IN		A		190.12.131.3
+mail		   IN		A		190.12.131.3
+

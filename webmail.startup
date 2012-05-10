@@ -1,0 +1,18 @@
+ifconfig eth0 up
+/sbin/ifconfig eth0 hw ether 00:00:00:00:31:02
+/etc/init.d/apache2 start
+
+chmod a+w /var/spool/mail
+chmod 755 /etc/exim4/exim4.conf
+
+/etc/init.d/exim4 start
+/etc/init.d/inetd start
+
+dhclient
+#adiciona os utilizadorres do pine a password é password
+useradd -m -g users -p sa3tHJ3/KuYvI -s /bin/sh bernardo
+useradd -m -g users -p sa3tHJ3/KuYvI -s /bin/sh guilherme
+useradd -m -g users -p sa3tHJ3/KuYvI -s /bin/sh bernardo2
+useradd -m -g users -p sa3tHJ3/KuYvI -s /bin/sh guilherme2
+useradd -m -g users -p sa3tHJ3/KuYvI -s /bin/sh bernardo3
+useradd -m -g users -p sa3tHJ3/KuYvI -s /bin/sh guilherme3

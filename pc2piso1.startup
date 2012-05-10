@@ -1,0 +1,5 @@
+/sbin/ifconfig eth0 up
+/sbin/ifconfig eth0 hw ether 00:00:00:00:01:01
+dhclient
+
+useradd bernardo21

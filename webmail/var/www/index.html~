@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Site da Empresa</title>
+</head>
+
+<body>
+<h1>Bem Vindo a Empresa Empresa</h1>
+<a href="www.empresa.pt/pasta/">carregue aqui para seguir para a proxima pagina </a>
+
+<footer>
+<h3>feito pelo guilherme e pelo bernardo</h3>
+</footer>

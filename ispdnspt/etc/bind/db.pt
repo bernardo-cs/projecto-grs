@@ -1,0 +1,14 @@
+$TTL    60000
+@               IN      SOA     ispdnspt.pt.    root.ispdnspt.pt. (
+                        2012031201 ; serial
+                        28800 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+                        
+@ IN NS ispdnspt.pt.
+ispdnspt IN A 190.12.192.1
+
+empresa IN NS dnsempresa1.empresa.pt.
+dnsempresa1.empresa IN A 190.12.131.1

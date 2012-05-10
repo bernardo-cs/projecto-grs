@@ -1,0 +1,15 @@
+/sbin/ifconfig eth0 up
+/sbin/ifconfig eth1 up
+/sbin/ifconfig eth2 up
+/sbin/ifconfig eth3 up
+/sbin/ifconfig eth0 hw ether 00:00:00:00:40:00 #  switch Offices<->Piso1 eth0
+/sbin/ifconfig eth1 hw ether 00:00:00:00:40:01 #  switch Offices<->Piso2 eth1
+/sbin/ifconfig eth2 hw ether 00:00:00:00:40:02 #  switch Offices<->Piso3 eth2
+/sbin/ifconfig eth3 hw ether 00:00:00:00:40:03 #  switch Offices<->Router  eth3
+brctl addbr br0       # creates a bridging process  called br0
+brctl addif br0 eth0  # tells br0 to switch frames from/to eth0
+brctl addif br0 eth1  # tells br0 to switch frames from/to eth1
+brctl addif br0 eth2  # tells br0 to switch frames from/to eth2
+brctl addif br0 eth3  # tells br0 to switch frames from/to eth3
+brctl stp br0 on      # enable the spanning tree protocol
+/sbin/ifconfig br0 up # starts br0

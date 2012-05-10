@@ -1,0 +1,12 @@
+/sbin/ifconfig eth0 190.12.128.1 netmask 255.255.255.224 broadcast 190.12.128.31 up
+/sbin/ifconfig eth0 hw ether 00:00:00:00:AA:00
+/sbin/ifconfig eth1 190.12.192.4 netmask 255.255.255.224 broadcast 190.12.192.31 up
+/sbin/ifconfig eth1 hw ether 00:00:00:00:AA:01
+route add -net 190.12.130.0 netmask 255.255.255.0   gw 190.12.128.2 dev eth0
+route add -net 190.12.131.0 netmask 255.255.255.224 gw 190.12.128.2 dev eth0 
+
+## Firewall stuff-- DMZ Rules
+
+# forward traffic between WAN and Internal Network
+#iptables -A FORWARD -i eth1 -o eth0 -m state --state ESTABLISHED,RELATED -j ACCEPT
+#iptables -A FORWARD -i eth0 -o eth1 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
