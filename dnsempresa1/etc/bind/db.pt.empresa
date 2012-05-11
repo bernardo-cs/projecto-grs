@@ -13,5 +13,6 @@ webmail IN A 190.12.131.3
 www IN A 190.12.131.3
 imap IN A 190.12.131.3
 pop IN A 190.12.131.3
+router IN A 190.12.130.1
 
 
