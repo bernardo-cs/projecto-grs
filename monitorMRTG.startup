@@ -1,0 +1,10 @@
+/sbin/ifconfig eth0 up
+/sbin/ifconfig eth0 hw ether 00:00:00:00:55:55
+dhclient eth0
+/etc/init.d/apache2 start
+
+#ver lista de utilizadores
+#cat /etc/passwd | cut -d":" -f1      
+
+#adicionar utilizador, depois seguir os passos... utilizador a adicionar: bernardo pc1 e guilherme pc2
+#adduser bernardo

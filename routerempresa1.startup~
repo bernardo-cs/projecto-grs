@@ -1,0 +1,25 @@
+/sbin/ifconfig eth0 190.12.130.1 netmask 255.255.255.0 broadcast 190.12.130.255 up
+/sbin/ifconfig eth1 190.12.131.4 netmask 255.255.255.224 broadcast 190.12.131.31 up
+/sbin/ifconfig eth2 190.12.128.2 netmask 255.255.255.224 broadcast 190.12.131.31 up 
+/sbin/ifconfig eth0 hw ether 00:00:00:00:E0:00
+/sbin/ifconfig eth1 hw ether 00:00:00:00:E0:01
+/sbin/ifconfig eth2 hw ether 00:00:00:00:E0:02
+route add -net 190.12.192.0 netmask 255.255.255.224 gw 190.12.128.1 dev eth2
+/etc/init.d/dhcp3-server start
+
+
+#/etc/fireempresa.fw
+## Firewall stuff-- DMZ Rules
+# forward traffic between DMZ and LAN
+#iptables -A FORWARD -i eth0 -o eth1 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+#iptables -A FORWARD -i eth1 -o eth0 -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+# forward traffic between DMZ and WAN servers SMTP, Mail etc
+#iptables -A FORWARD -i eth1 -o eth2 -m state --state ESTABLISHED,RELATED -j ACCEPT
+#iptables -A FORWARD -i eth2 -o eth1 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+
+# Route incoming SMTP (port 25 ) traffic to DMZ server 190.12.131.3
+#iptables -t nat -A PREROUTING -p tcp -i eth2 -d 190.12.131.32 --dport 25 -j DNAT --to-destination 190.12.130.3
+
+#Route HTTP & HTTPS traffic
+#iptables -t nat -A PREROUTING -p tcp -i eth2 -d 190.12.131.32 -m multiport --dport 80,443 -j DNAT --to-destination 190.12.130.3
