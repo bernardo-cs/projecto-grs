@@ -8,7 +8,7 @@ route add -net 190.12.192.0 netmask 255.255.255.224 gw 190.12.128.1 dev eth2
 /etc/init.d/dhcp3-server start
 
 
-/etc/fireempresa.fw
+#/etc/fireempresa.fw
 ## Firewall stuff-- DMZ Rules
 # forward traffic between DMZ and LAN
 #iptables -A FORWARD -i eth0 -o eth1 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
