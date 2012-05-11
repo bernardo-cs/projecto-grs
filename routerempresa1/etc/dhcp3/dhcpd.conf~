@@ -31,7 +31,7 @@ subnet 190.12.131.0 netmask 255.255.255.224 {
 	fixed-address 190.12.130.2;
 
 	option broadcast-address 190.12.130.255;
-	option routers 190.12.131.4;
+	option routers 190.12.130.1;
 	option domain-name "empresa.pt";
 	option domain-name-servers 190.12.131.1 ,190.12.131.2;
 	default-lease-time 2160000;
