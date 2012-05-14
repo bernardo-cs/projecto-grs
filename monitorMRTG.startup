@@ -7,13 +7,18 @@ route del default gw 192.168.1.1
 
 LANG=C
 
+chmod g+w /var/www/index.html 
+
 ####  MRTG Servidor Web  #####
 #CPU DISCO RAM TCP
-indexmaker --output=/var/www/webmail-info/index.html /root/webmail-info.cfg
-mrtg /root/webmail-info.cfg.cfg
+env LANG=C indexmaker --output=/var/www/webmail-info/index.html /root/webmail-info.cfg
+env LANG=C mrtg /root/webmail-info.cfg
 
-# Tráfego
-cfgmaker --global 'WorkDir:/var/www/webmail' -output /root/webmail-mrtg.cfg mrtg@190.12.131.3
-indexmaker --output=/var/www/webmail/index.html /root/webmail-mrtg.cfg
-mrtg /root/webmail-mrtg.cfg
+# Tráfego 
+env LANG=C indexmaker --output=/var/www/webmail/index.html /root/webmail-mrtg.cfg
+env LANG=C mrtg /root/webmail-mrtg.cfg
 
+
+#### MRTG Router Empresa ####
+env LANG=C indexmaker --output=/var/www/router/index.html /root/router.cfg
+env LANG=C mrtg /root/router.cfg

@@ -2,3 +2,4 @@ monitorMRTG pc1piso1 pc1piso2 pc1piso3 pc2piso1 pc2piso2 pc2piso3 switchpiso1 sw
 ispdnspt ispdnsroot isppcconfig: isprouter 
 monitorMRTG pc1piso1 pc1piso2 pc1piso3 pc2piso1 pc2piso2 pc2piso3 : switchpiso1 switchpiso2 switchpiso3 switchoffices sebastiao
 dnsempresa1 dnsempresa2 webmail: switchdmz
+monitorMRTG: webmail

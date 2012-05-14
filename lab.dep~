@@ -1,4 +1,4 @@
-pc1piso1 pc1piso2 pc1piso3 pc2piso1 pc2piso2 pc2piso3 switchpiso1 switchpiso2 switchpiso3 switchoffices dnsempresa1 webmail switchdmz sebastiao: routerempresa1
+monitorMRTG pc1piso1 pc1piso2 pc1piso3 pc2piso1 pc2piso2 pc2piso3 switchpiso1 switchpiso2 switchpiso3 switchoffices dnsempresa1 webmail switchdmz sebastiao: routerempresa1
 ispdnspt ispdnsroot isppcconfig: isprouter 
-pc1piso1 pc1piso2 pc1piso3 pc2piso1 pc2piso2 pc2piso3 : switchpiso1 switchpiso2 switchpiso3 switchoffices sebastiao
+monitorMRTG pc1piso1 pc1piso2 pc1piso3 pc2piso1 pc2piso2 pc2piso3 : switchpiso1 switchpiso2 switchpiso3 switchoffices sebastiao
 dnsempresa1 dnsempresa2 webmail: switchdmz
