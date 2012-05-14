@@ -1,9 +1,15 @@
 /sbin/ifconfig eth0 up
 /sbin/ifconfig eth0 hw ether 00:00:00:00:55:55
 dhclient eth0
+/etc/init.d/apache2 start
 
-#ver lista de utilizadores
-#cat /etc/passwd | cut -d":" -f1      
+route del default gw 192.168.1.1 
 
-#adicionar utilizador, depois seguir os passos... utilizador a adicionar: bernardo pc1 e guilherme pc2
-#adduser bernardo
+LANG=C
+
+cfgmaker --global 'WorkDir:/var/www/webmail' -output /root/webmail-mrtg.cfg mrtg@190.12.131.3
+
+indexmaker --output=/var/www/webmail/index.html /root/webmail-mrtg.cfg
+
+mrtg /root/webmail-mrtg.cfg
+

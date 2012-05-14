@@ -9,7 +9,10 @@ chmod 755 /etc/exim4/exim4.conf
 /etc/init.d/inetd start
 
 dhclient
-#adiciona os utilizadorres do pine a password é password
+
+snmpd
+
+#adiciona os utilizadores do pine a password é password
 useradd -m -g users -p sa3tHJ3/KuYvI -s /bin/sh bernardo
 useradd -m -g users -p sa3tHJ3/KuYvI -s /bin/sh guilherme
 useradd -m -g users -p sa3tHJ3/KuYvI -s /bin/sh bernardo2
