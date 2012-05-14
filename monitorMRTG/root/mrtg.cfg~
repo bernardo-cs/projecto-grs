@@ -1,0 +1,238 @@
+# Created by 
+# /usr/bin/cfgmaker --global WorkDir:/var/www/router --output /root/mrtg.cfg rwcommu@190.12.130.1
+
+
+### Global Config Options
+
+#  for UNIX
+# WorkDir: /home/http/mrtg
+
+#  for Debian
+WorkDir: /var/www/router
+
+#  or for NT
+# WorkDir: c:\mrtgdata
+
+### Global Defaults
+
+#  to get bits instead of bytes and graphs growing to the right
+# Options[_]: growright, bits
+
+EnableIPv6: no
+WorkDir:/var/www/router
+
+######################################################################
+# System: routerempresa1
+# Description: Linux routerempresa1 2.6.26.5-netkit-K2.8 #1 Thu Nov 26 15:37:25 CET 2009 i686
+# Contact: bernardo_simoes <bersimoes@gmail.com>
+# Location: router_da_empresa
+######################################################################
+
+
+### Interface 1 >> Descr: 'lo' | Name: 'lo' | Ip: '127.0.0.1' | Eth: '' ###
+### The following interface is commented out because:
+### * it is a Software Loopback interface
+# 
+# Target[190.12.130.1_1]: 1:rwcommu@190.12.130.1:
+# SetEnv[190.12.130.1_1]: MRTG_INT_IP="127.0.0.1" MRTG_INT_DESCR="lo"
+# MaxBytes[190.12.130.1_1]: 1250000
+# Title[190.12.130.1_1]: Traffic Analysis for 1 -- routerempresa1
+# PageTop[190.12.130.1_1]: <h1>Traffic Analysis for 1 -- routerempresa1</h1>
+# 		<div id="sysdetails">
+# 			<table>
+# 				<tr>
+# 					<td>System:</td>
+# 					<td>routerempresa1 in router_da_empresa</td>
+# 				</tr>
+# 				<tr>
+# 					<td>Maintainer:</td>
+# 					<td>bernardo_simoes &lt;bersimoes@gmail.com&gt;</td>
+# 				</tr>
+# 				<tr>
+# 					<td>Description:</td>
+# 					<td>lo  </td>
+# 				</tr>
+# 				<tr>
+# 					<td>ifType:</td>
+# 					<td>softwareLoopback (24)</td>
+# 				</tr>
+# 				<tr>
+# 					<td>ifName:</td>
+# 					<td>lo</td>
+# 				</tr>
+# 				<tr>
+# 					<td>Max Speed:</td>
+# 					<td>1250.0 kBytes/s</td>
+# 				</tr>
+# 				<tr>
+# 					<td>Ip:</td>
+# 					<td>127.0.0.1 (monitorMRTG)</td>
+# 				</tr>
+# 			</table>
+# 		</div>
+
+
+### Interface 2 >> Descr: 'teql0' | Name: 'teql0' | Ip: '' | Eth: '' ###
+### The following interface is commented out because:
+### * it is administratively DOWN
+### * it is operationally DOWN
+### * has a speed of 0 which makes no sense
+# 
+# Target[190.12.130.1_2]: 2:rwcommu@190.12.130.1:
+# SetEnv[190.12.130.1_2]: MRTG_INT_IP="" MRTG_INT_DESCR="teql0"
+# MaxBytes[190.12.130.1_2]: 0
+# Title[190.12.130.1_2]: Traffic Analysis for 2 -- routerempresa1
+# PageTop[190.12.130.1_2]: <h1>Traffic Analysis for 2 -- routerempresa1</h1>
+# 		<div id="sysdetails">
+# 			<table>
+# 				<tr>
+# 					<td>System:</td>
+# 					<td>routerempresa1 in router_da_empresa</td>
+# 				</tr>
+# 				<tr>
+# 					<td>Maintainer:</td>
+# 					<td>bernardo_simoes &lt;bersimoes@gmail.com&gt;</td>
+# 				</tr>
+# 				<tr>
+# 					<td>Description:</td>
+# 					<td>teql0  </td>
+# 				</tr>
+# 				<tr>
+# 					<td>ifType:</td>
+# 					<td>Other (1)</td>
+# 				</tr>
+# 				<tr>
+# 					<td>ifName:</td>
+# 					<td>teql0</td>
+# 				</tr>
+# 				<tr>
+# 					<td>Max Speed:</td>
+# 					<td>0.0 Bytes/s</td>
+# 				</tr>
+# 			</table>
+# 		</div>
+
+
+### Interface 3 >> Descr: 'eth0' | Name: 'eth0' | Ip: '190.12.130.1' | Eth: '00-00-00-00-e0-00' ###
+
+Target[190.12.130.1_3]: 3:rwcommu@190.12.130.1:
+SetEnv[190.12.130.1_3]: MRTG_INT_IP="190.12.130.1" MRTG_INT_DESCR="eth0"
+MaxBytes[190.12.130.1_3]: 1250000
+Title[190.12.130.1_3]: Traffic Analysis for 3 -- routerempresa1
+PageTop[190.12.130.1_3]: <h1>Traffic Analysis for 3 -- routerempresa1</h1>
+		<div id="sysdetails">
+			<table>
+				<tr>
+					<td>System:</td>
+					<td>routerempresa1 in router_da_empresa</td>
+				</tr>
+				<tr>
+					<td>Maintainer:</td>
+					<td>bernardo_simoes &lt;bersimoes@gmail.com&gt;</td>
+				</tr>
+				<tr>
+					<td>Description:</td>
+					<td>eth0  </td>
+				</tr>
+				<tr>
+					<td>ifType:</td>
+					<td>ethernetCsmacd (6)</td>
+				</tr>
+				<tr>
+					<td>ifName:</td>
+					<td>eth0</td>
+				</tr>
+				<tr>
+					<td>Max Speed:</td>
+					<td>1250.0 kBytes/s</td>
+				</tr>
+				<tr>
+					<td>Ip:</td>
+					<td>190.12.130.1 ()</td>
+				</tr>
+			</table>
+		</div>
+
+
+### Interface 4 >> Descr: 'eth1' | Name: 'eth1' | Ip: '190.12.131.4' | Eth: '00-00-00-00-e0-01' ###
+
+Target[190.12.130.1_4]: 4:rwcommu@190.12.130.1:
+SetEnv[190.12.130.1_4]: MRTG_INT_IP="190.12.131.4" MRTG_INT_DESCR="eth1"
+MaxBytes[190.12.130.1_4]: 1250000
+Title[190.12.130.1_4]: Traffic Analysis for 4 -- routerempresa1
+PageTop[190.12.130.1_4]: <h1>Traffic Analysis for 4 -- routerempresa1</h1>
+		<div id="sysdetails">
+			<table>
+				<tr>
+					<td>System:</td>
+					<td>routerempresa1 in router_da_empresa</td>
+				</tr>
+				<tr>
+					<td>Maintainer:</td>
+					<td>bernardo_simoes &lt;bersimoes@gmail.com&gt;</td>
+				</tr>
+				<tr>
+					<td>Description:</td>
+					<td>eth1  </td>
+				</tr>
+				<tr>
+					<td>ifType:</td>
+					<td>ethernetCsmacd (6)</td>
+				</tr>
+				<tr>
+					<td>ifName:</td>
+					<td>eth1</td>
+				</tr>
+				<tr>
+					<td>Max Speed:</td>
+					<td>1250.0 kBytes/s</td>
+				</tr>
+				<tr>
+					<td>Ip:</td>
+					<td>190.12.131.4 ()</td>
+				</tr>
+			</table>
+		</div>
+
+
+### Interface 5 >> Descr: 'eth2' | Name: 'eth2' | Ip: '190.12.128.2' | Eth: '00-00-00-00-e0-02' ###
+
+Target[190.12.130.1_5]: 5:rwcommu@190.12.130.1:
+SetEnv[190.12.130.1_5]: MRTG_INT_IP="190.12.128.2" MRTG_INT_DESCR="eth2"
+MaxBytes[190.12.130.1_5]: 1250000
+Title[190.12.130.1_5]: Traffic Analysis for 5 -- routerempresa1
+PageTop[190.12.130.1_5]: <h1>Traffic Analysis for 5 -- routerempresa1</h1>
+		<div id="sysdetails">
+			<table>
+				<tr>
+					<td>System:</td>
+					<td>routerempresa1 in router_da_empresa</td>
+				</tr>
+				<tr>
+					<td>Maintainer:</td>
+					<td>bernardo_simoes &lt;bersimoes@gmail.com&gt;</td>
+				</tr>
+				<tr>
+					<td>Description:</td>
+					<td>eth2  </td>
+				</tr>
+				<tr>
+					<td>ifType:</td>
+					<td>ethernetCsmacd (6)</td>
+				</tr>
+				<tr>
+					<td>ifName:</td>
+					<td>eth2</td>
+				</tr>
+				<tr>
+					<td>Max Speed:</td>
+					<td>1250.0 kBytes/s</td>
+				</tr>
+				<tr>
+					<td>Ip:</td>
+					<td>190.12.128.2 ()</td>
+				</tr>
+			</table>
+		</div>
+
+
