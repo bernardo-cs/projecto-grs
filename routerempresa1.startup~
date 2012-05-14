@@ -7,6 +7,8 @@
 route add -net 190.12.192.0 netmask 255.255.255.224 gw 190.12.128.1 dev eth2
 /etc/init.d/dhcp3-server start
 
-snmpd
+/etc/init.d/snmpd start
 
-#/etc/fireempresa.fw
+iptables -t nat -A POSTROUTING -p udp --dport 161 -j ACCEPT
+
+/etc/fireempresa.fw
