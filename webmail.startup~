@@ -12,6 +12,10 @@ dhclient
 
 snmpd
 
+#testar ligações TCP
+# netstat -tn (ligações establecidas)
+#netstat -anp --tcp
+
 #adiciona os utilizadores do pine a password é password
 useradd -m -g users -p sa3tHJ3/KuYvI -s /bin/sh bernardo
 useradd -m -g users -p sa3tHJ3/KuYvI -s /bin/sh guilherme

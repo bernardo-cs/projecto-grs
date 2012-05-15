@@ -10,3 +10,37 @@ route add -net 190.12.192.0 netmask 255.255.255.224 gw 190.12.128.1 dev eth2
 /etc/init.d/snmpd start
 
 /etc/fireempresa.fw
+
+### Firewall Entrega 2  ###
+
+
+
+#Bloquear Trafego ICMP
+iptables -I INPUT -p ICMP -j REJECT
+iptables -I OUTPUT -p ICMP -j REJECT
+iptables -I FORWARD -p ICMP -j REJECT
+
+#Bloquear trafego UDP
+iptables -I INPUT -p UDP -j REJECT
+iptables -I OUTPUT -p UDP -j REJECT
+iptables -I FORWARD -p UDP -j REJECT
+
+#Aceitar SNMP porto 161
+iptables -I FORWARD 1 -p udp --dport 161 -j ACCEPT
+iptables -I INPUT 1 -p udp --dport 161 -j ACCEPT
+iptables -I OUTPUT 1 -p udp --dport 161 -j ACCEPT
+
+#Permitir apenas 1000 pacotes ICMP por segundo
+iptables -I FORWARD 1 -p icmp -m limit --limit  1000/s -j ACCEPT
+iptables -I INPUT 1 -p icmp -m limit --limit  1000/s -j ACCEPT
+iptables -I OUTPUT 1 -p icmp -m limit --limit  1000/s -j ACCEPT
+
+#Permitir apenas 8000 pacotes ICMP por segundo
+iptables -I FORWARD 1 -p udp -m limit --limit  8000/s -j ACCEPT
+iptables -I INPUT 1 -p udp -m limit --limit  8000/s -j ACCEPT
+iptables -I OUTPUT 1 -p udp -m limit --limit  8000/s -j ACCEPT
+
+#Bloquear SNMP porto 162
+iptables -I INPUT 1 -p 162 -j DROP
+iptables -I OUTPUT 1 -p 162 -j DROP
+
