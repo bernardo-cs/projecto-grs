@@ -7,6 +7,8 @@ route del default gw 192.168.1.1
 
 LANG=C
 
+chmod g+w /var/www/index.html 
+
 ####  MRTG Servidor Web  #####
 #CPU DISCO RAM TCP
 env LANG=C indexmaker --output=/var/www/webmail-info/index.html /root/webmail-info.cfg
@@ -20,3 +22,9 @@ env LANG=C mrtg /root/webmail-mrtg.cfg
 #### MRTG Router Empresa ####
 env LANG=C indexmaker --output=/var/www/router/index.html /root/router.cfg
 env LANG=C mrtg /root/router.cfg
+
+#### MRTG tests  ###
+#ver as mibs existentes no objecto de interfaces
+snmpwalk -v1 -c mrtg 190.12.121.3 ifDescr
+
+

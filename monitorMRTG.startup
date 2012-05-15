@@ -22,3 +22,11 @@ env LANG=C mrtg /root/webmail-mrtg.cfg
 #### MRTG Router Empresa ####
 env LANG=C indexmaker --output=/var/www/router/index.html /root/router.cfg
 env LANG=C mrtg /root/router.cfg
+
+#### MRTG tests  ###
+#ver as mibs existentes no objecto de interfaces
+snmpwalk -v1 -c mrtg 190.12.121.3 ifDescr
+
+#### MRTG Crontab Job  ####
+#crontab -e
+#*/5 * * * * /usr/bin/mrtg /root/webmail-info.cfg /root/webmail-mrtg.mrtg /root/router.cfg --logging /var/log/mrtg.log
