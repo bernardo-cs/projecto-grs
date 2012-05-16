@@ -9,6 +9,5 @@ brctl stp br0 on      # enable the spanning tree protocol
 /sbin/ifconfig br0 up # starts br0
 /wall.sh
 
-## Firewall ##
-#bloqueia ligacoes do exterior
-#iptables -A INPUT -i eth1 -p tcp --syn -j DROP
+#snort -c /etc/snort/snort.conf -l /var/log/snort/ -i br0
+

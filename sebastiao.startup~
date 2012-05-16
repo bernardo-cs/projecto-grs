@@ -7,8 +7,7 @@ brctl addif br0 eth0  # tells br0 to switch frames from/to eth0
 brctl addif br0 eth1  # tells br0 to switch frames from/to eth1
 brctl stp br0 on      # enable the spanning tree protocol
 /sbin/ifconfig br0 up # starts br0
-#/wall.sh
+/wall.sh
 
-## Firewall ##
-#bloqueia ligacoes do exterior
-#iptables -A INPUT -i eth1 -p tcp --syn -j DROP
+#snort -c /etc/snort/snort.conf -l /var/log/snort/ - br0
+
