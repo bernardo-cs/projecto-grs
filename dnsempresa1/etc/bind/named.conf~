@@ -20,7 +20,8 @@ options {
         // forwarders {
         //      0.0.0.0;
         // };
-
+	allow-transfer { 190.12.131.2; };
+	listen-on port 53 { any; };
 	min-roots 1;
 	};
 
@@ -59,8 +60,10 @@ zone "255.in-addr.arpa" {
 
 // add entries for other zones below here
 
-zone "lugroma3.org" {
+zone "empresa.pt" {
         type master;
-        file "/etc/bind/db.org.lugroma3";
+        file "/etc/bind/db.pt.empresa";
+        also-notify { 190.12.131.2; };
+        notify yes;
 };
 

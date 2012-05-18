@@ -4,3 +4,16 @@
 dhclient
 /etc/init.d/bind start
 
+## permitir a comunicação com o slave ##
+mkdir -p /var/lib/named/etc
+mkdir /var/lib/named/dev
+mkdir -p /var/lib/named/var/cache/bind
+mkdir -p /var/lib/named/var/run/bind/run
+mv /etc/bind /var/lib/named/etc
+ln -s /var/lib/named/etc/bind /etc/bind
+mknod /var/lib/named/dev/null c 1 3
+mknod /var/lib/named/dev/random c 1 8
+chmod 666 /var/lib/named/dev/*
+chown -R bind:bind /var/lib/named/var/*
+chown -R bind:bind /var/lib/named/etc/bind
+

@@ -7,6 +7,7 @@
 
 options {
         directory "/var/cache/bind";
+        allow-notify {192.168.0.1};
         // If there is a firewall between you and nameservers you want
         // to talk to, you might need to uncomment the query-source
         // directive below.  Previous versions of BIND always asked
@@ -29,7 +30,7 @@ logging {
         category lame-servers { null; };
 	};
 
-	// prime the server with knowledge of the root servers
+	 prime the server with knowledge of the root servers
 zone "." {
         type hint;
         file "/etc/bind/db.root";
@@ -62,6 +63,6 @@ zone "255.in-addr.arpa" {
 zone "empresa.pt" {
         type slave;
         file "/etc/bind/db.pt.empresa";
-        masters{190.12.130.1};
+        masters{190.12.130.1;};
 };
 
