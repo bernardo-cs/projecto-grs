@@ -1,7 +1,7 @@
 # Created by 
 # /usr/bin/cfgmaker --global WorkDir:/var/www/webmail -output /root/webmail-mrtg.cfg mrtg@190.12.131.3
 #Directory[_]: webmail
-WorkDir: /var/www/
+WorDir: /var/www/
 
 ### Global Config Options
 

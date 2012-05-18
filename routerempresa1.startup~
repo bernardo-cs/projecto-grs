@@ -12,9 +12,6 @@ route add -net 190.12.192.0 netmask 255.255.255.224 gw 190.12.128.1 dev eth2
 /etc/fireempresa.fw
 
 ### Firewall Entrega 2  ###
-
-
-
 #Bloquear Trafego ICMP
 iptables -I INPUT -p ICMP -j REJECT
 iptables -I OUTPUT -p ICMP -j REJECT

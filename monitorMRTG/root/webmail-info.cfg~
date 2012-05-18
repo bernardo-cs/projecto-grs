@@ -1,25 +1,15 @@
-#
-# File: /root/webmail-info.cfg
-#
-# Configuration file for non bandwidth server statistics
-#
-
-#
-# Define global options
-#
-
 LoadMIBs: /usr/share/snmp/mibs/UCD-SNMP-MIB.txt,/usr/share/snmp/mibs/TCP-MIB.txt
-workdir: /var/www/webmail-info/
-
-
+#workdir: /var/www/webmail-info/
+Directory[_]: webmail-info
+workdir: /var/www/
 #
 # CPU Monitoring
 # (Scaled so that the sum of all three values doesn't exceed 100)
 #
 
 Target[server.cpu]:ssCpuRawUser.0&ssCpuRawUser.0:mrtg@190.12.131.3 + ssCpuRawSystem.0&ssCpuRawSystem.0:mrtg@190.12.131.3 +  ssCpuRawNice.0&ssCpuRawNice.0:mrtg@190.12.131.3
-Title[server.cpu]: Server CPU Load
-PageTop[server.cpu]: <h1>CPU Load - System, User and Nice Processes</h1>
+Title[server.cpu]: Carga no CPU
+PageTop[server.cpu]: <h1>Carga no CPU - System, User e Nice Processes</h1>
 MaxBytes[server.cpu]: 100
 ShortLegend[server.cpu]: %
 YLegend[server.cpu]: CPU Utilization
@@ -35,8 +25,8 @@ Unscaled[server.cpu]: ymwd
 #
 
 Target[server.memory]: memAvailReal.0&memTotalReal.0:mrtg@190.12.131.3
-Title[server.memory]: Free Memory
-PageTop[server.memory]: <h1>Free Memory</h1>
+Title[server.memory]: Memória Disponível
+PageTop[server.memory]: <h1>Memória Disponível</h1>
 MaxBytes[server.memory]: 100000000000
 ShortLegend[server.memory]: B
 YLegend[server.memory]: Bytes
@@ -51,8 +41,8 @@ kMG[server.memory]: k,M,G,T,P,X
 #
 # Memory Monitoring (Percentage usage)
 #
-Title[server.mempercent]: Percentage Free Memory
-PageTop[server.mempercent]: <h1>Percentage Free Memory</h1>
+Title[server.mempercent]: Percentagem de Memória Livre
+PageTop[server.mempercent]: <h1>Memória Livre</h1>
 Target[server.mempercent]: ( memAvailReal.0&memAvailReal.0:mrtg@190.12.131.3 ) * 100 / ( memTotalReal.0&memTotalReal.0:mrtg@190.12.131.3 )
 options[server.mempercent]: growright,gauge,transparent,nopercent
 Unscaled[server.mempercent]: ymwd
@@ -70,8 +60,8 @@ Legend2[server.mempercent]: Percentage Free Memory
 #
  
 Target[server.newconns]: tcpPassiveOpens.0&tcpActiveOpens.0:mrtg@190.12.131.3
-Title[server.newconns]: Newly Created TCP Connections
-PageTop[server.newconns]: <h1>New TCP Connections</h1
+Title[server.newconns]: Novas ligações TCP
+PageTop[server.newconns]: <h1>Novas ligações TCP</h1
 MaxBytes[server.newconns]: 10000000000
 ShortLegend[server.newconns]: c/s
 YLegend[server.newconns]: Conns / Min
@@ -87,8 +77,8 @@ Options[server.newconns]: growright,nopercent,perminute
 #
 
 Target[server.estabcons]: tcpCurrEstab.0&tcpCurrEstab.0:mrtg@190.12.131.3
-Title[server.estabcons]: Currently Established TCP Connections
-PageTop[server.estabcons]: <h1>Established TCP Connections</h1>
+Title[server.estabcons]: Ligações TCP establecidas
+PageTop[server.estabcons]: <h1>Ligações TCP establecidas</h1>
 MaxBytes[server.estabcons]: 10000000000
 ShortLegend[server.estabcons]:
 YLegend[server.estabcons]: Connections
@@ -105,26 +95,24 @@ Target[server.proc]: .1.3.6.1.2.1.25.1.6.0&.1.3.6.1.2.1.25.1.6.0:mrtg@190.12.131
 MaxBytes[server.proc]: 5000
 YLegend[server.proc]: Processes
 LegendI[server.proc]: Processes
-Legend1[server.proc]: Approximate number of processes
+Options[server.proc]: growright
+Legend1[server.proc]: Numero Aproximado de Processos
 ShortLegend[server.proc]: ~
 Title[server.proc]: webmail:Procs - numero aproximado de processos
-PageTop[server.proc]: <h1>webmail:numero aproximado de processos</h1>
+PageTop[server.proc]: <h1>Processos</h1>
     <div id="sysdetails">
     </div>
 
-
-
 #
-# Disk Usage Monitoring
+#Numero de Segmentos TCP
 #
+Target[server.seg]: tcpInSegs.0&tcpInSegs.0:mrtg@190.12.131.3
+MaxBytes[server.seg]: 5000
+Options[server.seg]: growright
+YLegend[server.seg]: Segmentos TCP
+LegendI[server.seg]: Segmentos TCP
+Legend1[server.seg]: Numero de Segmentos TCP
+Title[server.seg]: Numero de Segmentos TCP
+PageTop[server.seg]: <h1>Segmentos TCP</h1>
 
-#Target[server.disk]: dskPercent.1&dskPercent.2:mrtg@190.12.131.3
-#Title[server.disk]: Disk Partition Usage
-#PageTop[server.disk]: <h1>Disk Partition Usage /home and /var</h1>
-#MaxBytes[server.disk]: 100
-#ShortLegend[server.disk]: %
-#YLegend[server.disk]: Utilization
-#LegendI[server.disk]: /home
-#LegendO[server.disk]: /var
-#Options[server.disk]: gauge,growright,nopercent
-#Unscaled[server.disk]: ymwd
+

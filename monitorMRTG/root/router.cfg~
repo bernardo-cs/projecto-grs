@@ -1,6 +1,7 @@
 # Created by 
 # /usr/bin/cfgmaker --global WorkDir:/var/www/router -output /root/router2.cfg mrtg@190.12.130.1
-
+Directory[_]: router
+workdir: /var/www/
 
 ### Global Config Options
 
@@ -19,7 +20,7 @@
 # Options[_]: growright, bits
 
 EnableIPv6: no
-WorkDir:/var/www/router
+#WorkDir:/var/www/router
 
 ######################################################################
 # System: routerempresa1

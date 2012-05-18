@@ -1,0 +1,8 @@
+#RunAsDaemon:Yes
+#Interval:5 
+
+workdir: /var/www/
+
+Include: /root/router.cfg
+Include: /root/webmail-info.cfg
+Include: /root/webmail-mrtg.cfg
