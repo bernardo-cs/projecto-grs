@@ -1,9 +1,6 @@
 /sbin/ifconfig eth0 up
 /sbin/ifconfig eth0 hw ether 00:00:00:00:31:00
 
-dhclient
-/etc/init.d/bind start
-
 ## permitir a comunicação com o slave ##
 mkdir -p /var/lib/named/etc
 mkdir /var/lib/named/dev
@@ -16,4 +13,9 @@ mknod /var/lib/named/dev/random c 1 8
 chmod 666 /var/lib/named/dev/*
 chown -R bind:bind /var/lib/named/var/*
 chown -R bind:bind /var/lib/named/etc/bind
+
+dhclient
+/etc/init.d/bind start
+
+
 

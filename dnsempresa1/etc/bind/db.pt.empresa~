@@ -8,11 +8,12 @@ $TTL    60000
                         )
 @ IN NS dnsempresa1.empresa.pt.
 dnsempresa1 IN A 190.12.131.1
+NS dnsempresa2
 @ IN MX 5 webmail.empresa.pt  
 webmail IN A 190.12.131.3
 www IN A 190.12.131.3
 imap IN A 190.12.131.3
 pop IN A 190.12.131.3
 router IN A 190.12.130.1
-
+dnsempresa2 IN A 190.12.131.2
 
