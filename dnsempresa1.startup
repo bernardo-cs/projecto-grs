@@ -17,5 +17,7 @@ chown -R bind:bind /var/lib/named/etc/bind
 dhclient
 /etc/init.d/bind start
 
-
+# test dns servers
+# dig www.empresa.pt @190.12.131.2
+# dig www.empresa.pt @190.12.131.1
 
