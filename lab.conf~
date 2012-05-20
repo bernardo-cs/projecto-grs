@@ -5,6 +5,7 @@ LAB_EMAIL=bernardo.simoes@ist.utl.pt
 LAB_WEB=www.ist.utl.pt
 
 ## Le Empresa
+routerempresa1[mem]=64
 routerempresa1[0]="K"
 routerempresa1[1]="L"
 routerempresa1[2]="M"
@@ -52,12 +53,13 @@ sebastiao[mem]=512
 sebastiao[0]="J"
 sebastiao[1]="K"
 
-sebastiona[mem]=128
+sebastiona[mem]=512
 sebastiona[0]="L"
 sebastiona[1]="Z"
 
 dnsempresa1[0]="N"
 dnsempresa2[0]="O"
+webmail[mem]=64
 webmail[0]="P"
 
 ## Le ISP

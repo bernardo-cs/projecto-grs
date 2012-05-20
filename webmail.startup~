@@ -12,8 +12,12 @@ dhclient
 
 snmpd
 
+#Bloquear SNMP porto 162
+#iptables -I INPUT 1 -p 162 -j DROP
+#iptables -I OUTPUT 1 -p 162 -j DROP
+
 #testar ligações TCP
-# netstat -tn (ligações establecidas)
+#netstat -tn (ligações establecidas)
 #netstat -anp --tcp
 
 #adiciona os utilizadores do pine a password é password
