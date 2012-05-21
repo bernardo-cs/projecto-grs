@@ -13,8 +13,8 @@ dhclient
 snmpd
 
 #Bloquear SNMP porto 162
-iptables -I INPUT 1 -p 162 -j DROP
-iptables -I OUTPUT 1 -p 162 -j DROP
+#iptables -I INPUT 1 -p 909 -j DROP
+#iptables -I OUTPUT 1 -p 909 -j DROP
 
 #testar ligações TCP
 #netstat -tn (ligações establecidas)
