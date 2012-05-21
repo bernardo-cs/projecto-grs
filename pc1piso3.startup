@@ -2,4 +2,4 @@
 /sbin/ifconfig eth0 hw ether 00:00:00:00:03:00
 dhclient
 
-useradd guilherme13
+useradd -m -g users -p sa3tHJ3/KuYvI -d /home/bernardo3 -s /bin/sh bernardo3

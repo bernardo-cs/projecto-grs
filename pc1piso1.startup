@@ -7,3 +7,11 @@ dhclient
 
 #adicionar utilizador, depois seguir os passos... utilizador a adicionar: bernardo pc1 e guilherme pc2
 #adduser bernardo
+useradd -m -g users -p sa3tHJ3/KuYvI -d /home/bernardo -s /bin/sh bernardo
+
+
+#username="bernardo"
+#password="password"
+#pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
+#echo $pass
+#useradd -m -p $pass $username

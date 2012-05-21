@@ -52,7 +52,7 @@ sebastiao[mem]=512
 sebastiao[0]="J"
 sebastiao[1]="K"
 
-sebastiona[mem]=128
+sebastiona[mem]=512
 sebastiona[0]="L"
 sebastiona[1]="Z"
 
