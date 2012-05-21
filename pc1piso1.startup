@@ -9,6 +9,7 @@ dhclient
 #adduser bernardo
 useradd -m -g users -p sa3tHJ3/KuYvI -d /home/bernardo -s /bin/sh bernardo
 
+#su bernardo
 
 #username="bernardo"
 #password="password"

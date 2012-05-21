@@ -6,8 +6,10 @@ dhclient
 #cat /etc/passwd | cut -d":" -f1      
 
 #adicionar utilizador, depois seguir os passos... utilizador a adicionar: bernardo pc1 e guilherme pc2
-adduser bernardo
+#adduser bernardo
+useradd -m -g users -p sa3tHJ3/KuYvI -d /home/bernardo -s /bin/sh bernardo
 
+su bernardo
 
 #username="bernardo"
 #password="password"

@@ -35,7 +35,8 @@ switchdmz[3]="P"
 
 monitorMRTG[mem]=64
 monitorMRTG[0]="X"
-monitorMRTG[22]=tap,192.168.1.1,192.168.1.2
+#monitorMRTG[22]=tap,192.168.1.1,192.168.1.2
+monitorMRTG[22]=tap,10.0.0.1,10.0.0.2
 
 pc1piso1[0]="A"
 
@@ -59,6 +60,7 @@ sebastiona[1]="Z"
 
 dnsempresa1[0]="N"
 dnsempresa2[0]="O"
+
 webmail[mem]=64
 webmail[0]="P"
 

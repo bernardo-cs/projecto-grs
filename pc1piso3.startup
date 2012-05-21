@@ -3,3 +3,5 @@
 dhclient
 
 useradd -m -g users -p sa3tHJ3/KuYvI -d /home/bernardo3 -s /bin/sh bernardo3
+
+#su bernardo3

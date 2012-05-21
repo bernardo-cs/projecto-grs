@@ -8,3 +8,5 @@ useradd -m -g users -p sa3tHJ3/KuYvI -d /home/guilherme2 -s /bin/sh guilherme2
 #pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
 #echo $pass
 #useradd -m -p $pass $username
+
+#su guilherme2
