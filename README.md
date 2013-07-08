@@ -1,6 +1,10 @@
-== Example of a possible company network
+Example of a possible company network
+=============
 
-== Features
+
+Features
+=============
+
 two DNS servers as master and salve.
 webmail server
 MRTG server to monitor network activity
@@ -10,7 +14,9 @@ Level three Firewall
 Switch configured for the DMZ
 Router with firewall on the entrance of the company
 
-== Notes
+Notes
+=============
+
 This project was implemented using netkit, all machines (ruters/switches/pcs) 
 are running linux with proper configurations.
 
