@@ -1,26 +1,34 @@
+![Alt text](http://www.ist.utl.pt/img/tecnico.png)
 Example of a possible company network
 =============
 
 
-Features
-=============
+## Features ##
 
-two DNS servers as master and salve.
-webmail server
-MRTG server to monitor network activity
-Snort IDS detection system
-Level two Firewall
-Level three Firewall
-Switch configured for the DMZ
-Router with firewall on the entrance of the company
 
-Notes
-=============
+> 1. two DNS servers as master and salve.
+>
+> 2. webmail server
+>
+> 3. MRTG server to monitor network activity
+>
+> 4. Snort IDS detection system
+>
+> 5. Level two Firewall
+>
+> 6. Level three Firewall
+>
+> 7. Switch configured for the DMZ
+>
+> 8. Router with firewall on the entrance of the company
 
-This project was implemented using netkit, all machines (ruters/switches/pcs) 
-are running linux with proper configurations.
+## Notes ##
 
-Booting this project will initialize something like 20~30 vms so you will need 
-be patiente :P in order to see something work :P
 
-This project was part of a network management course from Tech Lisbon or IST
+> This project was implemented using netkit, all machines (ruters/switches/pcs) 
+> are running linux with proper configurations.
+>
+> Booting this project will initialize something like 20~30 vms so you will need 
+> be patiente :P in order to see something work :P
+>
+> This project was part of a network management course from Tech Lisbon or IST
